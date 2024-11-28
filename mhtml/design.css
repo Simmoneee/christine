@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #000000; /* Solid black background */
+    position: relative;
+    font-family: 'Roboto', sans-serif; /* Updated font */
+}
+
+/* Background Image Styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("image.jpg") no-repeat center center, #000;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.2; /* Reduced opacity for better readability */
+}
+
+/* Wrapper Styling */
+.wrapper {
+    width: 400px; /* Reduced width */
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Darker background for the wrapper */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Softer shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Heading */
+h2 {
+    font-size: 2rem; /* Slightly smaller font size */
+    margin-bottom: 20px; /* Reduced margin */
+    color: #f9a825; /* Yellow color for heading */
+    font-weight: 700;
+}
+
+/* Input Fields */
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Floating Label Styling */
+.input-field label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.input-field input {
+    width: 100%;
+    height: 40px; /* Slightly smaller input fields */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    outline: none;
+    font-size: 14px; /* Smaller font size */
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #f9a825; /* Yellow color when input is focused */
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    font-size: 14px;
+    color: #f9a825; /* Yellow color when input is valid */
+    top: -18px;
+}
+
+/* Button Styling */
+button {
+    background-color: #f9a825; /* Yellow color for the button */
+    color: black;
+    font-weight: 600;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width buttons for better alignment */
+}
+
+button:hover {
+    color: black;
+    background: rgba(255, 255, 255, 0.2); /* Light background when hovered */
+    border-color: black;
+}
+
+/* Registration Section */
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+/* Link Styling */
+.wrapper a {
+    color: #f9a825; /* Yellow link color */
+    text-decoration: none;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Styling for the "Remember me" Checkbox */
+.remember-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.remember-label input[type="checkbox"] {
+    margin-right: 12px;
+}
+
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: white;
+}
+
+#remember {
+    accent-color: #f9a825;
+}
+
+/* Additional Styling for Subtle Transitions */
+.input-field input:focus, .input-field input:hover {
+    box-shadow: 0 0 5px rgba(249, 168, 37, 0.6); /* Yellow glow effect */
+}
+
+/* Image Container Styling */
+.image-container {
+    padding: 20px;
+    border: 2px solid #333; /* Dark border around the image */
+    border-radius: 12px; /* Rounded corners for the container */
+    background-color: #fff; /* White background for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow effect */
+    text-align: center;
+    width: 90%; /* Make container responsive */
+    max-width: 420px; /* Adjust to match image size */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Image Styling */
+img {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Limit the maximum size of the image */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Heading Styling */
+h1 {
+    font-family: Arial, sans-serif;
+    color: #f9a825; /* Yellow color for the heading */
+    margin-bottom: 20px; /* Space between the heading and the image */
+    font-size: 2rem; /* Slightly larger font for the title */
+    font-weight: 700; /* Bold title */
+}

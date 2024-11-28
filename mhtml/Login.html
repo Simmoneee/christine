@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Login Form with modern design.">
+    <meta name="author" content="Your Name">
+
+    <!-- Page Title -->
+    <title>Login Form</title>
+
+    <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Login Form -->
+        <form action="#" method="POST" onsubmit="handleLogin(event)">
+            <h2>Login</h2>    
+
+            <!-- Email Input -->
+            <div class="input-field">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Enter your Email</label>
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-field">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Enter your Password</label>
+            </div>
+
+            <!-- Remember Me and Forgot Password Section -->
+            <div class="forget">
+                <label for="remember" class="remember-label">
+                    <input type="checkbox" id="remember" name="remember">
+                    <span> Remember me</span>
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>    
+
+            <!-- Submit Button -->
+            <button type="submit">Log In</button>
+
+            <!-- Registration Link -->
+            <div class="register">
+                <p>Don't have an account? <a href="Register.html">Register here</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Function to handle the login process
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Check if email and password are not empty (you can add further validation here)
+            if (email && password) {
+                alert("Login Successful!");
+                // Redirect to a new page (e.g., dashboard or home page) after login
+                window.location.href = "home.html";  // Replace with the actual page you want to redirect to
+            } else {
+                alert("Please enter both email and password.");
+            }
+        }
+    </script>
+</body>
+</html>
